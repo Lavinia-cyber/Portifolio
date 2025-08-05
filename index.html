@@ -4,116 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio - Lavínia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
-            font-family: sans-serif;
-            margin: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-        nav a {
-            color: #fff;
-            text-decoration: none;
-        }
-        .container {
-            max-width: 960px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .profile {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        .profile img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 10px;
-        }
-        .skills {
-            margin-bottom: 20px;
-        }
-        .skills h2 {
-            border-bottom: 2px solid #333;
-            padding-bottom: 5px;
-            margin-bottom: 10px;
-        }
-        .contact {
-            border-top: 1px solid #ccc;
-            padding-top: 20px;
-            text-align: center;
-        }
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #333;
-            color: #fff;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
     </style>
 </head>
-<body>
-    <header>
-        <h1>Lavínia</h1>
-        <nav>
-            <ul>
-                <li><a href="#sobre">Sobre Mim</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#atuacao">Atuação</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
+<body class="bg-gray-100 text-gray-800">
+    <header class="bg-gray-900 text-white p-6 text-center">
+        <div class="container mx-auto">
+            <h1 class="text-4xl font-bold">Lavínia</h1>
+            <nav class="mt-4">
+                <ul class="flex justify-center space-x-6">
+                    <li><a href="#sobre" class="hover:text-gray-400 transition-colors duration-300">Sobre Mim</a></li>
+                    <li><a href="#habilidades" class="hover:text-gray-400 transition-colors duration-300">Habilidades</a></li>
+                    <li><a href="#atuacao" class="hover:text-gray-400 transition-colors duration-300">Área de Atuação</a></li>
+                    <li><a href="#contato" class="hover:text-gray-400 transition-colors duration-300">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <div class="container">
-        <section id="sobre" class="profile">
-            <img src="imagem_perfil.jpg" alt="Foto de Perfil da Lavínia">
-            <h2>Lavínia, 17 anos</h2>
-            <p>Estudante com grande interesse em advocacia empresarial e apaixonada por comunicação.</p>
-        </section>
+    <main class="container mx-auto p-6 md:p-10">
+        <div class="bg-white rounded-lg shadow-xl p-8 mb-8">
+            <section id="sobre" class="flex flex-col items-center text-center">
+                <img src="imagem_perfil.jpg" alt="Foto de Perfil da Lavínia" class="w-40 h-40 rounded-full object-cover mb-4 ring-4 ring-gray-300">
+                <h2 class="text-3xl font-semibold mb-2">Lavínia, 17 anos</h2>
+                <p class="text-gray-600 max-w-2xl">Estudante com grande interesse em advocacia empresarial e apaixonada por comunicação. Busco unir essas duas paixões para atuar de forma estratégica e eficaz no mundo corporativo.</p>
+            </section>
+        </div>
 
-        <section id="habilidades" class="skills">
-            <h2>Habilidades</h2>
-            <ul>
-                <li>Excelente comunicação verbal e escrita</li>
-                <li>Habilidade de apresentação</li>
-                <li>Empatia e escuta ativa</li>
-                <li>Organização e atenção aos detalhes</li>
-                <li>Proatividade</li>
-            </ul>
-        </section>
+        <div class="grid md:grid-cols-2 gap-8 mb-8">
+            <div class="bg-white rounded-lg shadow-xl p-8">
+                <section id="habilidades">
+                    <h2 class="text-2xl font-bold border-b-2 border-gray-300 pb-2 mb-4">Habilidades</h2>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li>Excelente comunicação verbal e escrita</li>
+                        <li>Habilidade de apresentação em público</li>
+                        <li>Empatia e escuta ativa</li>
+                        <li>Organização e atenção meticulosa aos detalhes</li>
+                        <li>Proatividade e iniciativa na resolução de problemas</li>
+                    </ul>
+                </section>
+            </div>
 
-        <section id="atuacao">
-            <h2>Área de Atuação</h2>
-            <p>Meu foco é a área de advocacia empresarial, onde busco desenvolver minhas habilidades de comunicação para auxiliar na interpretação de leis, negociação e relacionamento com clientes e outras partes interessadas.</p>
-            <p>Embora ainda esteja no início da minha jornada, estou ansiosa para aprender e contribuir para o sucesso de organizações através de uma comunicação eficaz e um entendimento sólido do ambiente empresarial.</p>
-        </section>
+            <div class="bg-white rounded-lg shadow-xl p-8">
+                <section id="atuacao">
+                    <h2 class="text-2xl font-bold border-b-2 border-gray-300 pb-2 mb-4">Área de Atuação</h2>
+                    <p class="text-gray-700 mb-4">Meu foco é a área de <strong>advocacia empresarial</strong>. Busco desenvolver minhas habilidades de comunicação para auxiliar na interpretação de leis, negociação e no relacionamento com clientes e outras partes interessadas.</p>
+                    <p class="text-gray-700">Embora ainda esteja no início da minha jornada, estou ansiosa para aprender, evoluir e contribuir para o sucesso de organizações através de uma comunicação eficaz e um entendimento sólido do ambiente empresarial.</p>
+                </section>
+            </div>
+        </div>
 
-        <section id="contato" class="contact">
-            <h2>Contato</h2>
-            <p>Você pode entrar em contato comigo através do email: <a href="mailto:seu_email@exemplo.com">seu_email@exemplo.com</a></p>
-            <p>Ou pelo telefone: (XX) XXXXX-XXXX</p>
-        </section>
-    </div>
+        <div class="bg-white rounded-lg shadow-xl p-8 text-center">
+            <section id="contato">
+                <h2 class="text-2xl font-bold border-b-2 border-gray-300 pb-2 mb-4">Contato</h2>
+                <p class="text-gray-700 mb-2">Você pode entrar em contato comigo através do email:</p>
+                <a href="mailto:seu_email@exemplo.com" class="text-blue-600 hover:text-blue-800 font-medium transition-colors duration-300">seu_email@exemplo.com</a>
+                <p class="text-gray-700 mt-4 mb-2">Ou pelo telefone:</p>
+                <p class="text-lg font-semibold text-gray-800">(XX) XXXXX-XXXX</p>
+            </section>
+        </div>
+    </main>
+
+    <footer class="bg-gray-900 text-white text-center p-4 mt-8">
+        <p>&copy; 2025 Lavínia. Todos os direitos reservados.</p>
+    </footer>
 </body>
 </html>
